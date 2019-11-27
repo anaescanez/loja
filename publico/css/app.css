@@ -1076,6 +1076,32 @@ margin: 5%;
     color: #000;
 }
 
+#caixaFaturamentoAnual{
+    width: 20%;
+    height: 25%;
+    background-color: white;
+    border-radius: 8%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1%;
+    padding-top: 2%;
+    margin-bottom: 10%;
+    margin-top: 3%;
+}
+
+#caixaMes{
+    width: 10%;
+    height: 20%;
+    background-color: white;
+    border-radius: 8%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1%;
+    padding-top: 2%;
+    margin-bottom: 10%;
+    margin-top: 3%;
+}
+
 /*!
  * mmenu.js
  * mmenujs.com

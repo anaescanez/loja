@@ -4,13 +4,13 @@
         <title></title>
     </head>
     <body>
-        <h2 margin-top: 5%;"> Informe o Ano: </h2>
-        <hr align="center" width="100%" size="1">
-         <div class="caixinha">
+        <h2 class="cadastroTitulo"> Informe o Ano: </h2>
+        
+         <div id="caixaFaturamentoAnual">
              <form action="" method="POST">
-                   <input type="text"  name="op"><br><br>         
-                    <button type="submit">Enviar</button>
+                   <input style="margin-left: 3%;" type="text"  name="op"><br><br>         
+                    <button style="margin-left: 3%;" type="submit" class="btn">Enviar</button>
              </form>
-             
+         </div>    
     </body>
 </html>

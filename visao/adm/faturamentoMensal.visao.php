@@ -4,9 +4,8 @@
         <title></title>
     </head>
     <body>
-        <h2> Faturamento Mensal: </h2>
-        <hr align="center" width="100%" size="1">
-         <div class="caixinha">
+        <h2 class="cadastroTitulo"> Faturamento Mensal: </h2>
+        <div id="caixaMes">
              <form action="" method="POST">
              <select name="op"> 
                   <option> Mês </option>
@@ -24,9 +23,8 @@
                   <option  value="12"> Dezembro </option>
              </select>
                  <br><br>
-              <button type="submit">Enviar</button>
+              <button type="submit" class="btn">Enviar</button>
              </form>
-          </div>
-       
+</div>
     </body>
 </html>
