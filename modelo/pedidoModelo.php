@@ -1,5 +1,5 @@
 <?php
-
+ 
 function inserirPedido($idUsuario, $idFormaPagamento, $idendereco, $total, $produtos) {
 $sql = "INSERT INTO pedido (idUsuario,  idFormaPagamento, idendereco, datacompra, total) VALUES('$idUsuario', '$idFormaPagamento', '$idendereco', curdate(), '$total')"; 
 $resultado = mysqli_query($cnx = conn(), $sql);
@@ -14,8 +14,9 @@ $resultado = mysqli_query($cnx = conn(), $sql);
        
     return 'Pedido cadastrado com sucesso!';
 }
+ 
 function PedidosDoCliente($idUsuario){    
-    $sql = "SELECT DATE_FORMAT (pedido.datacompra, '%d/%m/%y') as Data, total, idPedido FROM pedido WHERE idUsuario = idUsuario order by idPedido";
+    $sql = "call pedidos_do_cliente($idUsuario)";
     $resultado = mysqli_query(conn(), $sql);
     $pedidos=array();
     while($linha = mysqli_fetch_assoc($resultado)){
@@ -23,11 +24,11 @@ function PedidosDoCliente($idUsuario){
     }
     return $pedidos;
 }
-
+ 
 function pegarPedidoPorId ($idpedido){
-    $sql= "SELECT pedido.idpedido, usuario.nomeUsuario, formapagamento.descricao, endereco.logradouro, endereco.numero, endereco.complemento,"
+    $sql= "select pedido.idpedido, usuario.nomeUsuario, formapagamento.descricao, endereco.logradouro, endereco.numero, endereco.complemento,"
             . "endereco.bairro, endereco.cidade, endereco.cep, DATE_FORMAT (pedido.datacompra, '%d/%m/%y') as Data, "
-            . "pedido.total FROM usuario inner join endereco on usuario.idUsuario=endereco.idUsuario "
+            . "pedido.total from usuario inner join endereco on usuario.idUsuario=endereco.idUsuario "
             . "inner join pedido on pedido.idendereco=endereco.idendereco "
             . "inner join formapagamento on pedido.idFormaPagamento= formapagamento.idFormaPagamento where idpedido= $idpedido";
     $resultado= mysqli_query(conn(), $sql);
