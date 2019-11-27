@@ -106,8 +106,7 @@ function editar($id) {
             $tipoUsuario = $_POST["tipoUsuario"];
 			
 	editarCliente($id, $nome, $email, $senha, $cpf, $datanasc, $sexo, $tipoUsuario);
-         $dados["cliente"] = pegarClientePorId($id);
-         exibir("cliente/visualizar", $dados);
+         redirecionar("cliente/ver/".$id);
          
 	} else {
             $dados["cliente"] = pegarClientePorId($id);

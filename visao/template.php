@@ -2,6 +2,7 @@
     <head>
         <title>World of books</title>
         <meta charset="utf-8">
+		<link style="width:20px; height:7px;" rel="shortcut icon" href="./publico/imgs/logo2.png" type="image/x-png"/>
         <base href="<?= URL_BASE ?>"><!--Esta instrução é super importante e não deve ser mudada!-->
         <link href="https://fonts.googleapis.com/css?family=Kalam&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="./publico/css/app.css">
